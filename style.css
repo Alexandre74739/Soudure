@@ -99,7 +99,7 @@ ul li:hover a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 125vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -271,11 +271,28 @@ ul li:hover a {
 }
 
 #elements div h4 {
+    position: relative;
     color: brown;
     font-family: 'Oxanium', sans-serif;
     font-size: 30px;
     font-weight: 900;
     margin: 0 0 20px 0;
+    text-decoration: none;
+}
+
+#elements div h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background-color: brown;
+    transition: width 0.3s;
+}
+
+#elements div:hover h4::after {
+    width: 100%;
 }
 
 #elements div p {

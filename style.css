@@ -1,154 +1,311 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=DM+Serif+Display:ital@0;1&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&family=Oxanium:wght@200..800&family=Pacifico&display=swap');
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: whitesmoke;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    background-color: whitesmoke;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-    /* Header */
+    /* Header */
 
 header {
-    width: 100%;
-    position: fixed;
-    height: 80px;
-    top: 0;
-    left: 0;
-    background-color: rgba(245, 245, 245, 0.9);
-    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    background-color: rgba(245, 245, 245, 0.9);
+    z-index: 1000;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
 }
 
-#logo  {
-    color: rgba(0, 0, 0, 0.8);
-    font-family: 'Oxanium', sans-serif;
-    font-weight: 600;
-    font-size: 30px;
+#logo  {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 #logo span {
-    color: brown;
+    color: brown;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    gap: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 ul li {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 ul li::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 4px;
-    width: 0;
-    background-color: brown;
-    transition: width 0.3s;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background-color: brown;
+    transition: width 0.3s;
 }
 
 ul li a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.8);
-    font-family: 'Oxanium', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    transition: color 0.3s;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    transition: color 0.3s;
 }
 
 ul li:hover {
-    background-color: rgba(30, 30, 30, 0.1);
+    background-color: rgba(30, 30, 30, 0.1);
 }
 
 ul li:hover::after {
-    width: 100%;
+    width: 100%;
 }
 
 ul li:hover a {
-    color: brown;
+    color: brown;
 }
 
-    /* Home */
+    /* Home */
 
 #home {
-    background-image: url("images/home.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 120vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: whitesmoke;
+    background-image: url("images/home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 125vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 #home-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    z-index: 2;
 }
 
 #home-description h1 {
-    font-family: 'Oxanium', sans-serif;
-    font-size: 44px;
-    font-weight: 900;
-    margin: 0;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 44px;
+    font-weight: 900;
+    margin: 0;
 }
 
 #home-description h4 {
-    font-family: 'Oxanium', sans-serif;
-    font-size: 20px;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 20px;
 }
 
 #home-description button {
-    padding: 20px;
-    border-radius: 5px;
-    border: 0;
-    background-color: brown;
-    transition: 0.5s;
+    padding: 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: brown;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 #home-description button:hover {
-    transform: scale(1.1, 1.1);
-    background-color: rgb(204, 61, 61);
+    transform: scale(1.1, 1.1);
+    background-color: rgb(204, 61, 61);
 }
 
-
-
 #home-description button a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-family: 'Oxanium', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+    /* About Us */
+
+#aboutUs {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;  
+}
+
+#aboutUs h1 {
+    text-align: center;
+    color: brown;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 44px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+#aboutUs div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#aboutUs div img, #aboutUs div p {
+    flex: 1;
+    max-width: 50%;
+}
+
+#aboutUs div img {
+    height: 300px;
+    object-fit: contain;
+}
+
+#aboutUs div p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+    /* Activity */
+
+#activity {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/band.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#band::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+#band h1 {
+    color: brown;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 44px;
+    font-weight: 900;
+    text-decoration: underline;
+    z-index: 2;
+    margin: 0;
+}
+
+#band h4 {
+    color: whitesmoke;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    z-index: 2;
+}
+
+#elements {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+    margin: 100px;
+}
+
+#elements div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+}
+
+#elements div h4 {
+    color: brown;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+}
+
+#elements div p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+#elements div button {
+    align-self: flex-end;
+    padding: 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: brown;
+    width: 200px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#elements div button:hover {
+    transform: scale(1.1, 1.1);
+    background-color: rgb(204, 61, 61);
+}
+
+#elements div button a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }

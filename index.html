@@ -74,10 +74,80 @@
 
     <!-- Avis -->
 
-    <section id="avis">
-        <h1>Ils nous ont fait confiance</h1>
-   
-    </section>
+    <section id="avis" style="padding: 20px; background: #fff;">
+        <h2 style="text-align: center;">Ils nous ont fait confiance</h2>
+        <div id="avis-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+          <!-- AVIS 1 -->
+          <div class="avis-item" style="width: 300px; padding: 15px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=identicon" alt="Photo client" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="font-style: italic;">"Super service, je recommande vivement !"</p>
+            <div style="color: gold;">★★★★★</div>
+          </div>
+          <!-- AVIS 2 -->
+          <div class="avis-item" style="width: 300px; padding: 15px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+            <img src="https://www.gravatar.com/avatar/fd2e63de7314f5ab22687cdd2361f8a9?d=identicon" alt="Photo client" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="font-style: italic;">"Très bon accueil et travail professionnel."</p>
+            <div style="color: gold;">★★★★☆</div>
+          </div>
+          <!-- AVIS 3 -->
+          <div class="avis-item" style="width: 300px; padding: 15px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+            <img src="https://www.gravatar.com/avatar/e13743a7f1db7f4246badd6fd6ff54ff?d=identicon" alt="Photo client" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="font-style: italic;">"Quelques lenteurs, mais le résultat était là."</p>
+            <div style="color: gold;">★★★☆☆</div>
+          </div>
+          <!-- AVIS 4 -->
+          <div class="avis-item" style="width: 300px; padding: 15px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+            <img src="https://www.gravatar.com/avatar/1b6453892473a467d07372d45eb05abc2031647a?d=identicon" alt="Photo client" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="font-style: italic;">"Sérieux et rapide, je reviendrai."</p>
+            <div style="color: gold;">★★★★★</div>
+          </div>
+          <!-- AVIS 5 -->
+          <div class="avis-item" style="width: 300px; padding: 15px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+            <img src="https://www.gravatar.com/avatar/9ae0ea9e3c9c6e1b9b6252c8395efdc1?d=identicon" alt="Photo client" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="font-style: italic;">"Un peu cher mais service impeccable."</p>
+            <div style="color: gold;">★★★★☆</div>
+          </div>
+          <!-- AVIS 6 -->
+          <div class="avis-item" style="width: 300px; padding: 15px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+            <img src="https://www.gravatar.com/avatar/98f13708210194c475687be6106a3b84?d=identicon" alt="Photo client" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="font-style: italic;">"Bon suivi et communication fluide."</p>
+            <div style="color: gold;">★★★★☆</div>
+          </div>
+        </div>
+      
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="loadMoreBtn" style="padding: 10px 20px; font-size: 16px; background-color: brown; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Afficher plus
+          </button>
+        </div>
+      </section>
+      
+    <script>
+        const avisItems = document.querySelectorAll(".avis-item");
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+        let visibleCount = 3;
+      
+        function updateAvisVisibility() {
+          avisItems.forEach((item, index) => {
+            item.style.display = index < visibleCount ? "block" : "none";
+          });
+      
+          // Cacher le bouton s’il n’y a plus d’éléments à afficher
+          if (visibleCount >= avisItems.length) {
+            loadMoreBtn.style.display = "none";
+          }
+        }
+      
+        loadMoreBtn.addEventListener("click", () => {
+          visibleCount += 3;
+          updateAvisVisibility();
+        });
+      
+        // Initialisation
+        updateAvisVisibility();
+    </script>
+      
+      
     
         
 </body>

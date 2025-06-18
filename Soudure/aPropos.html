@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aPropos.css">
+    <link rel="stylesheet" href="header+home.css">
+    <title>Hand Conceptor</title>
+
+</head>
+<body>
+    
+    <!-- Header -->
+
+    <header>
+        <nav>
+            <div id="logo">
+                <p>Hand <span>Conceptor</span></p>
+            </div>
+            <div id="menu-toggle">☰</div>
+            <div class="nav-links" id="nav-links">
+                <a class="btn fade-link" href="index.html">Accueil</a>
+                <a class="btn fade-link" href="prestations.html">Prestations & Réalisations</a>
+                <a class="btn fade-link" href="aPropos.html">À Propos</a>
+                <a class="btn fade-link" href="contact.html">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Home -->
+
+    <section id="home">
+        <div id="home-description">
+            <h1>Soudeur/ Chaudronnier/ Tuyauteur</h1>
+            <h4>Votre projet sur mesure</h4>
+            <a class="btn" href="contact.html">Parlons de votre projet !</a>
+        </div>
+    </section>
+
+    <!-- A Propos -->
+
+    <section id="a-propos">
+        <div id="bio">
+            <div id="personality">
+                <h1>A propos de moi</h1>
+                <h2>Soudeur, Chaudronnier et Tuyauteur à votre écoute</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laudantium ducimus laboriosam aut quasi natus nisi officiis ab non eum, exercitationem accusamus enim esse ipsa sequi asperiores quam ratione consectetur incidunt deleniti ea cum dicta dolor! Quos nam, praesentium delectus minus unde eum nesciunt quia corrupti, quisquam consectetur aspernatur. Dolorem quos blanditiis tenetur voluptate, omnis eius debitis cupiditate iste expedita.</p>
+                <a class="btn" href="contact.html">Parlons de votre projet !</a>
+            </div>
+            <img src="images/personne.png">
+        </div>
+    </section>
+
+    <!-- Parcours -->
+
+    <section id="parcours">
+        <div id="formations">
+            <h2>Mes formations</h2>
+            <ul>
+                <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, error.</p></li>
+                <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, error.</p></li>
+                <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, error.</p></li>
+                <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, error.</p></li>
+                <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, error.</p></li>
+            </ul>
+        </div>
+        <a class="btn" href="prestations.html">Je veux voir les réalisations !</a>
+    </section>
+
+    <script>
+        // Menu Hamburger
+        const toggleBtn = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        });
+    </script>
+    
+</body>

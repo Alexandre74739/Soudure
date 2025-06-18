@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=DM+Serif+Display:ital@0;1&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&family=Oxanium:wght@200..800&family=Pacifico&display=swap');
+
+    /* Index */
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    background-color: whitesmoke;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+    /* Header */
+    
+header {
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    background-color: rgba(245, 245, 245, 0.9);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#logo {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#logo span {
+    color: brown;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: brown;
+  font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+.nav-links .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-links .btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: brown;
+    transition: width 0.3s;
+}
+
+.nav-links .btn:hover {
+    color: brown;
+    background-color: rgba(30, 30, 30, 0.1);
+}
+
+.nav-links .btn:hover::after {
+    width: 100%;
+}
+
+.nav-links .btn.special {
+    background-color: brown;
+    color: whitesmoke;
+}
+
+.nav-links .btn.special:hover {
+    background-color: rgb(204, 61, 61);
+    transform: scale(1.05);
+}
+
+
+    /* Home */
+    
+#home {
+    background-image: url("images/home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    pointer-events: none;
+}
+
+#home-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+#home-description h1 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 44px;
+    font-weight: 900;
+    margin: 0;
+}
+
+#home-description h4 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 20px;
+    margin-bottom: 25px
+}
+
+#home-description a {
+    padding: 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: brown;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#home-description a:hover {
+    transform: scale(1.1, 1.1);
+    background-color: rgb(204, 61, 61);
+}
+
+    /* Responsive nav bar */
+
+@media screen and (max-width: 812px) {
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 200%;
+        background-color: rgba(245, 245, 245, 0.95);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-links a {
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid rgba(245, 245, 245, 0.95);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+    /* home responsive */
+
+@media  screen and (max-width: 400px) {
+
+    #home {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #home-description {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #home-right {
+        flex-direction: column;
+    }
+}

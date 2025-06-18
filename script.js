@@ -20,3 +20,25 @@ loadMoreBtn.addEventListener("click", () => {
 
 // Initialisation
 updateAvisVisibility();
+
+// Hamburger
+const toggleBtn = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Bouton déroulant (aboutUs)
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("toggleAboutBtn");
+    const moreText = document.getElementById("moreAboutText");
+
+    if (btn && moreText) {
+        btn.addEventListener("click", () => {
+            const isHidden = moreText.style.display === "none";
+            moreText.style.display = "inline";
+            btn.style.display = "none";
+        });
+    }
+});

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>[Entreprise]</title>
+    <link rel="stylesheet" href="header+home.css">
+    <title>Hand Conceptor</title>
 
 </head>
 <body>
@@ -14,17 +15,18 @@
     <header>
         <nav>
             <div id="logo">
-                <p>[LO<span>GO]</span></p>
+                <p>Hand <span>Conceptor</span></p>
             </div>
-            <div class="nav-links">
-                <a class="btn" href="#">Accueil</a>
-                <a class="btn" href="#">Prestations & Réalisations</a>
-                <a class="btn" href="#">À Propos</a>
-                <a class="btn" href="#">Contact</a>
+            <div id="menu-toggle">☰</div>
+            <div class="nav-links" id="nav-links">
+                <a class="btn fade-link" href="index.html">Accueil</a>
+                <a class="btn fade-link" href="prestations.html">Prestations & Réalisations</a>
+                <a class="btn fade-link" href="aPropos.html">À Propos</a>
+                <a class="btn fade-link" href="contact.html">Contact</a>
             </div>
+
         </nav>
     </header>
-    
 
     <!-- Home -->
 
@@ -32,17 +34,25 @@
         <div id="home-description">
             <h1>Soudeur/ Chaudronnier/ Tuyauteur</h1>
             <h4>Votre projet sur mesure</h4>
-            <a class="btn" href="#">Parlons de votre projet !</a>
+            <a class="btn" href="contact.html">Parlons de votre projet !</a>
         </div>
     </section>
 
     <!-- About Us -->
 
     <section id="aboutUs">
-        <h1>A propos de [Entreprise]</h1>
+        <h1>A propos de Hand Conceptor</h1>
         <div>
             <img src="images/personne.png">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab pariatur quas,<br>voluptatem dolore tempora vel maiores fugiat ipsam repellat temporibus exercitationem id quidem reprehenderit. Repellat architecto, molestiae placeat sint voluptatum magni ipsum adipisci et beatae natus voluptas? Ut quia assumenda sequi dolore, eius atque qui culpa maiores nemo quidem incidunt aliquid eaque fuga velit nisi modi cum laborum ipsum labore reprehenderit cupiditate eveniet provident natus non.<br>Neque maiores aut reprehenderit, dicta nemo animi repellendus praesentium beatae quia. Fugiat eaque similique doloremque sapiente aut veritatis. Minima rerum quasi iste? Deserunt minima voluptates earum iste reiciendis blanditiis incidunt dolor in, minus voluptatibus?</p>
+            <p>
+                <strong>Hand Conceptor</strong> incarne l’expertise artisanale au service de vos projets les plus exigeants. Spécialisée dans la soudure, le chaudronnage et la tuyauterie, notre entreprise allie savoir-faire traditionnel et techniques modernes pour vous offrir des réalisations précises et durables.<br>
+                <button id="toggleAboutBtn" class="btn-read-more">Lire plus !</button>
+                <span id="moreAboutText">
+                    Quel que soit votre projet, nous vous accompagnons à chaque étape, en apportant des solutions sur-mesure, adaptées à vos besoins spécifiques.<br>
+                    Chez <strong>Hand Conceptor</strong>, nous croyons que chaque détail compte. C’est pourquoi nous mettons un point d’honneur à allier performance technique et esthétisme, pour garantir votre entière satisfaction. Faire appel à nos services, c’est choisir un partenaire fiable, disponible et à votre écoute, prêt à relever tous vos défis industriels.<br>
+                    Confiez-nous vos idées, vos ambitions, et ensemble, donnons-leur vie avec précision, passion et professionnalisme.
+                </span>
+            </p>
         </div>
     </section>
 
@@ -56,18 +66,24 @@
         <div id="elements">
             <div>
                 <h4>Soudure</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus facere, dolorum ratione adipisci magnam aut accusamus, eligendi reprehenderit fuga ab minima accusantium blanditiis maiores, enim nobis eveniet tempora possimus. Odio non numquam sunt modi vel quibusdam ab fugiat nostrum quia impedit. Ratione quaerat autem iure nisi cumque voluptatibus nemo amet.</p>
-                <a class="btn" href="#">En savoir plus ᐅ</a>
+                <p>
+                Chez Hand Conceptor, chaque soudure reflète un engagement envers la qualité. Nos soudeurs qualifiés réalisent des assemblages solides, adaptés aux normes les plus strictes. Nous utilisons des techniques avancées pour assurer la longévité de chaque structure. Notre expertise garantit des finitions propres et résistantes. Choisir notre savoir-faire, c’est miser sur la précision et la durabilité.
+                </p>
+                <a class="btn" href="prestations.html">En savoir plus ᐅ</a>
             </div>
             <div>
                 <h4>Chaudronnerie</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus facere, dolorum ratione adipisci magnam aut accusamus, eligendi reprehenderit fuga ab minima accusantium blanditiis maiores, enim nobis eveniet tempora possimus. Odio non numquam sunt modi vel quibusdam ab fugiat nostrum quia impedit. Ratione quaerat autem iure nisi cumque voluptatibus nemo amet.</p>
-                <a class="btn" href="#">En savoir plus ᐅ</a>
+                <p>
+                Notre service de chaudronnerie vous assure des fabrications métalliques sur mesure. Chaque pièce est conçue avec soin pour allier robustesse, esthétique et fonctionnalité. Nous travaillons tous types de métaux, en respectant vos contraintes techniques. Grâce à nos équipements modernes, nous livrons des ouvrages fiables et soignés. La qualité est au cœur de chacune de nos réalisations.
+                </p>
+                <a class="btn" href="prestations.html">En savoir plus ᐅ</a>
             </div>
             <div>
                 <h4>Tuyauterie</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus facere, dolorum ratione adipisci magnam aut accusamus, eligendi reprehenderit fuga ab minima accusantium blanditiis maiores, enim nobis eveniet tempora possimus. Odio non numquam sunt modi vel quibusdam ab fugiat nostrum quia impedit. Ratione quaerat autem iure nisi cumque voluptatibus nemo amet.</p>
-                <a class="btn" href="#">En savoir plus ᐅ</a>
+                <p>
+                Nous réalisons des systèmes de tuyauterie complets, sécurisés et adaptés à vos flux industriels. Notre équipe conçoit des réseaux efficaces, qu’il s’agisse de fluides, d’air ou de gaz. Chaque installation respecte les normes en vigueur pour garantir fiabilité et sécurité. Grâce à notre précision, vous bénéficiez de performances optimales. Faites confiance à notre rigueur technique.
+                </p>               
+                <a class="btn" href="prestations.html">En savoir plus ᐅ</a>
             </div>
         </div>
     </section>
@@ -119,7 +135,7 @@
       </div>
     </section>
       
-  <script src="script.js"></script>
+    <script src="script.js"></script>
     
         
 </body>

@@ -1,11 +1,126 @@
-#bio {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 80px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#bio h1 {
-    font-size: 44px;
+
+a.btns {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 20px 30px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Oxanium', sans-serif;
+    background-color: brown;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+a.btns:hover {
+    background-color: rgb(204, 61, 61);
+    transform: scale(1.1, 1.1);
+}
+
+section {
+    padding: 60px 20px;
+}
+
+#a-propos {
+    background-color: #fff;
+}
+
+#bio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#personality {
+    flex: 1;
+}
+
+#personality h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+#personality h2 {
+    font-size: 1.5rem;
     color: brown;
+    margin: 10px 0;
+}
+
+#personality p {
+    margin-top: 1rem;
+    font-size: 20px;
+}
+
+#bio img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#parcours {
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+#formations {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+#formations h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#formations ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+#formations li {
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    #bio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #personality h1 {
+        font-size: 2rem;
+    }
+
+    #personality h2 {
+        font-size: 1.2rem;
+    }
+
+    }
+
+    @media (max-width: 480px) {
+    section {
+        padding: 40px 10px;
+    }
+
+    #personality h1,
+    #formations h2 {
+        font-size: 1.5rem;
+    }
 }
